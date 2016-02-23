@@ -1,3 +1,4 @@
+#!/bin/bash
 # Here the list of the PPA
 
 
