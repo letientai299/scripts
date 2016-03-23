@@ -25,7 +25,10 @@ function fetch_non_obsoled_package_indices {
 
 for package_index in  $(fetch_non_obsoled_package_indices)
 do
-  echo -ne "y" | install_sdk "${package_index}"
   echo "====================================================================="
-  echo.
+  echo "Start to install package:  ${package_index}"
+  echo "====================================================================="
+  echo -e "y" | install_sdk "${package_index}"
+  echo
+  echo
 done
