@@ -1,4 +1,4 @@
-#!/binbash
+#!/bin/bash
 # Install all non-obsolete android sdk packages.
 # author: Tai Le Tien (letientai299 at gmail.com)
 
