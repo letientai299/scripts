@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Hello Mathjax in Markdown</title>
+  </head>
+  <xmp theme="united" style="display:none;">
+
+When $a \ne 0$, there are two solutions to $\(ax^2 + bx + c = 0\)$ and they are
+
+$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
+
+$$\sum_{i=0}^n x_i^i $$
+
+
+$$ x = \frac{-b - \sqrt{b^2-4ac}}{2a} $$
+
+
+$$\dfrac{d}{dx} \left [[\int_a^x f(t)~dt \right ] = f(x)$$
+
+  </xmp>
+  <script src="http://strapdownjs.com/v/0.2/strapdown.js"></script>
+  <script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+  });
+  </script>
+</html>
