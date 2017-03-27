@@ -37,18 +37,18 @@ task "Xclip (for neovim clipboard)"
 sudo apt-get install xclip -y
 
 task "Python and neovim binding"
-sudo apt-get install python python 3 python-dev python3-dev python-pip python3-pip -y
+sudo apt-get install python python3 python-dev python3-dev python-pip python3-pip -y
 pip install --upgrade pip
 pip install --user neovim
 pip3 install --upgrade pip
 pip3 install --user neovim
 
 task "Ruby and neovim binding"
-sudo apt-get install ruby-dev ruby
+sudo apt-get install ruby-dev ruby -y
 sudo gem install neovim
 
 task "Tmux"
-sudo apt-get install tmux
+sudo apt-get install tmux -y
 pip3 install --user powerline-status
 
 task "Ranger"
@@ -82,3 +82,13 @@ sudo apt-get update && sudo apt-get install yarn -y
 
 task "sdkman"
 curl -s "https://get.sdkman.io" | bash
+
+task "VLC and mpv"
+sudo apt-get install -y vlc mpv
+
+task "Xterm 256 italic"
+cd $HOME
+mkdir temp
+cd temp
+wget "https://gist.github.com/sos4nt/3187620/raw/bca247b4f86da6be4f60a69b9b380a11de804d1e/xterm-256color-italic.terminfo"
+tic xterm-256color-italic.terminfo
