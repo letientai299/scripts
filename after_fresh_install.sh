@@ -78,9 +78,14 @@ sudo apt-get install -y nodejs
 task "Fix NPM permissions"
 mkdir ~/.npm-global
 npm config set prefix "$HOME/.npm-global"
-echo 'Fix npm permissions' >> $HOME/.profile
+echo '# Fix npm permissions' >> $HOME/.profile
 echo 'export PATH=$PATH:$HOME/.npm-global/bin' >> $HOME/.profile
 
+task "Install some favorite tools"
+npm install -g nodemon diff-so-fancy fkill-cli
+
+task "Update path to load nodejs binaries"
+echo 'export PATH="$PATH:$HOME/.npm-global/bin"' >> ~/.profile
 task "yarn"
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
 echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
